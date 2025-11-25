@@ -1,8 +1,6 @@
 FROM quay.io/jupyter/minimal-notebook:afe30f0c9ad8
 
-# Copy your environment file into the container
-COPY environment.yml /tmp/environment.yml
+COPY conda-linux-64.lock /tmp/conda-linux-64.lock
 
-# Install environment using mamba
-RUN mamba env update -n base -f /tmp/environment.yml && \
+RUN mamba install --yes --file /tmp/conda-linux-64.lock && \
     mamba clean --all --yes
