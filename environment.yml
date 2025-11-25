@@ -1,0 +1,9 @@
+name: dsci522
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - conda-lock
+prefix: /Users/yasamanbaher/miniforge3/envs/dsci522
